@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Adam Luftansyah</title>
+  <meta name="description" content="Portfolio pribadi Adam Luftansyah – RPL KIP P1 STMIK IKMI Cirebon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0f172a;
+      --panel: #111827;
+      --soft: #1f2937;
+      --text: #e5e7eb;
+      --muted:#9ca3af;
+      --brand:#22d3ee;
+      --brand-2:#a78bfa;
+      --accent:#34d399;
+      --card:#0b1222;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.65;
+    }
+    a{color:var(--brand);text-decoration:none}
+    a:hover{opacity:.9}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+
+    header.nav{
+      position:sticky;top:0;z-index:50;background:rgba(15,23,42,.95);
+      backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:14px 24px}
+    .brand{font-weight:800;font-size:20px}
+    .nav-links{display:flex;gap:18px;flex-wrap:wrap}
+    .nav-links a{color:var(--text);opacity:.85}
+    .nav-links a:hover{opacity:1}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:56px 24px}
+    .hero h1{font-size:clamp(26px,4vw,44px);line-height:1.2;margin:0}
+    .hero p{color:var(--muted);margin:14px 0 24px}
+    .pill{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid rgba(255,255,255,.08);border-radius:999px;font-size:13px;color:#d1fae5}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+    .btn{padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:var(--brand);color:#04252b;font-weight:700}
+    .btn.secondary{background:transparent;color:var(--text)}
+    .glass{background: rgba(255,255,255,.04);border-radius:18px;padding:12px;display:flex;justify-content:center;align-items:center}
+    .card{background: var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px}
+
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+
+    section{padding:32px 24px}
+    section h2{font-size:clamp(22px,3vw,28px);margin:0 0 10px}
+    section .sub{color:var(--muted);margin-top:0}
+
+    .timeline{border-left:2px dashed rgba(255,255,255,.12);padding-left:16px;margin-left:6px}
+    .timeline .item{margin:0 0 14px 0}
+    .timeline .title{font-weight:700}
+    .timeline .meta{color:var(--muted);font-size:14px}
+
+    footer{padding:40px 24px;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+    .avatar{width:100%;aspect-ratio:4/3;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:36px;color:#1e293b;background:linear-gradient(135deg, rgba(167,139,250,.15), rgba(34,211,238,.15))}
+
+    input,textarea{width:100%;margin:6px 0 12px;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0b1222;color:var(--text)}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr;text-align:center}
+      .nav-inner{flex-direction:column}
+      .cta{justify-content:center}
+    }
+    @media (max-width: 600px){
+      .container{padding:16px}
+      .nav-links{gap:12px;justify-content:center}
+      .hero{padding:32px 16px}
+      section{padding:24px 16px}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner container">
+      <div class="brand">Adam Luftansyah</div>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#tentang">Tentang</a>
+        <a href="#pendidikan">Pendidikan</a>
+        <a href="#skill">Keahlian</a>
+        <a href="#proyek">Proyek</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container hero">
+    <div>
+      <span class="pill">Jurusan: Rekayasa Perangkat Lunak <span style="background:#0d182d;border-radius:999px;padding:2px 8px">RPL KIP P1</span></span>
+      <h1>Halo! Saya <span style="color:var(--brand)">Adam Luftansyah</span> — Mahasiswa STMIK IKMI Cirebon.</h1>
+      <p>Saya tertarik membangun antarmuka web yang cepat, rapi, dan mudah digunakan. Fokus pada HTML, CSS, dan JavaScript modern.</p>
+      <div class="cta">
+        <a class="btn" href="#kontak">Hubungi Saya</a>
+        <a class="btn secondary" href="#proyek">Lihat Proyek</a>
+      </div>
+    </div>
+    <div class="glass">
+      <div class="avatar">AL</div>
+    </div>
+  </div>
+
+  <section id="ikmi" class="container">
+    <h2>Kata Pengantar tentang Kampus IKMI Cirebon</h2>
+    <p class="sub">STMIK IKMI Cirebon adalah kampus yang berfokus pada pengembangan kompetensi teknologi informasi dengan kurikulum yang adaptif terhadap kebutuhan industri.</p>
+    <div class="card">
+      <p>
+        Saya bangga menjadi bagian dari <strong>STMIK IKMI Cirebon</strong>. Lingkungan belajar yang kolaboratif, dosen yang suportif, dan ekosistem kegiatan yang aktif membantu saya berkembang sebagai insan teknologi.
+      </p>
+    </div>
+  </section>
+
+  <section id="tentang" class="container">
+    <h2>Tentang Saya</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <p>
+          Nama saya <strong>Adam Luftansyah</strong>. Saat ini saya menempuh pendidikan di <strong>STMIK IKMI Cirebon</strong>, kelas <strong>RPL KIP P1</strong>, jurusan <strong>Rekayasa Perangkat Lunak</strong>. Saya lulusan <strong>SMKN 1 Cirebon</strong>.
+        </p>
+      </div>
+      <div class="card">
+        <ul>
+          <li>Nama: Adam Luftansyah</li>
+          <li>Kampus: STMIK IKMI Cirebon</li>
+          <li>Kelas: RPL KIP P1</li>
+          <li>Jurusan: Rekayasa Perangkat Lunak</li>
+          <li>Asal Sekolah: SMKN 1 Cirebon</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="pendidikan" class="container">
+    <h2>Pendidikan</h2>
+    <div class="timeline">
+      <div class="item">
+        <div class="title">STMIK IKMI Cirebon – Rekayasa Perangkat Lunak</div>
+        <div class="meta">202X – Sekarang</div>
+      </div>
+      <div class="item">
+        <div class="title">SMKN 1 Cirebon</div>
+        <div class="meta">Tahun Lulus: ....</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skill" class="container">
+    <h2>Keahlian</h2>
+    <div class="grid cols-3">
+      <div class="card">HTML5</div>
+      <div class="card">CSS3</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Git & GitHub</div>
+      <div class="card">UI Basics</div>
+      <div class="card">Problem Solving</div>
+    </div>
+  </section>
+
+  <section id="proyek" class="container">
+    <h2>Proyek Terpilih</h2>
+    <div class="grid cols-3">
+      <div class="card">Landing Page</div>
+      <div class="card">To-Do List</div>
+      <div class="card">Komponen UI</div>
+    </div>
+  </section>
+
+  <section id="kontak" class="container">
+    <h2>Kontak</h2>
+    <div class="grid cols-2">
+      <form class="card" onsubmit="event.preventDefault(); alert('Pesan terkirim!');">
+        <label for="nama">Nama</label>
+        <input id="nama" name="nama" required />
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required />
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="4"></textarea>
+        <button class="btn" type="submit">Kirim</button>
+      </form>
+      <div class="card">
+        <ul>
+          <li>Email: adam@example.com</li>
+          <li>Instagram: @lfsyh_meclister</li>
+          <li>Telepon/WA: +62 892-7364-87</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Adam Luftansyah
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
